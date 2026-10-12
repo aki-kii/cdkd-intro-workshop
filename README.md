@@ -5,7 +5,7 @@ cdkd を初めて学ぶ人向けのワークショップリポジトリです。
 
 ## Codespaces
 
-ワークショップの参加者は、このリポジトリから GitHub Codespaces を開いて進めます。
+ワークショップの参加者は、このリポジトリを自分のアカウントに fork し、fork したリポジトリから GitHub Codespaces を開いて進めます。
 起動時に [.devcontainer/](.devcontainer/) の設定で Node.js と AWS CLI が用意され、[code/](code/) の依存もインストールされます。
 ワークショップの本文は GitHub Pages で読むため、Codespaces には hugo や Nix は入れていません。
 

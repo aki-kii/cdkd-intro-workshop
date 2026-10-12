@@ -33,19 +33,19 @@ const message = 'Hello from cdkd workshop!';
 左のターミナル（`code/cdk`）:
 
 ```bash
-npx cdk deploy --hotswap --yes
+time npx cdk deploy --hotswap --yes
 ```
 
 真ん中のターミナル（`code/express`）:
 
 ```bash
-npx cdk deploy --express --yes
+time npx cdk deploy --express --yes
 ```
 
 右のターミナル（`code/cdkd`）:
 
 ```bash
-cdkd deploy --yes
+time cdkd deploy --yes
 ```
 
 ## 出力を見てみよう
