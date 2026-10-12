@@ -11,13 +11,27 @@ weight = 100
 **GitHub Codespaces とは**: ブラウザの中で使える開発環境です。VS Code と同じ画面で、ファイルの編集やターミナルでのコマンド実行ができます。自分のパソコンに何もインストールしなくても、ワークショップに必要なツールがそろった環境がすぐに使えます。
 {{% /notice %}}
 
-### 1. GitHub Codespaces を起動する
+### 1. リポジトリを fork する
 
 以下のリンクを開きます。
 
 [https://github.com/jaws-ug-cdk/{{< reponame >}}](https://github.com/jaws-ug-cdk/{{< reponame >}})
 
-`Code` ボタンから `Codespaces` タブを開き、`Create codespace on main` ボタンを押します。
+画面右上の `Fork` ボタンを押します。`Create a new fork` の画面が開いたら、設定は変えずに `Create fork` ボタンを押します。
+
+`https://github.com/<GitHub のユーザー名>/{{< reponame >}}` という、自分のアカウントのリポジトリが作られます。
+
+{{% notice info %}}
+**fork とは**: ほかの人のリポジトリを、自分の GitHub アカウントにまるごとコピーすることです。fork したリポジトリは自分のものなので、ワークショップ中に書き換えたコードを自由にコミットして残しておけます。元のリポジトリには影響しません。
+{{% /notice %}}
+
+### 2. GitHub Codespaces を起動する
+
+fork した**自分のリポジトリ**のページで、`Code` ボタンから `Codespaces` タブを開き、`Create codespace on main` ボタンを押します。
+
+{{% notice warning %}}
+元のリポジトリ（`jaws-ug-cdk/{{< reponame >}}`）のページから Codespace を作らないように注意してください。画面左上のリポジトリ名が、自分の GitHub のユーザー名になっていることを確かめましょう。
+{{% /notice %}}
 
 画面が切り替わり、Codespace の作成が始まります。起動を待っている間に、次のページを読み進めてください。
 

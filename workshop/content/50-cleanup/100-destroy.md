@@ -10,19 +10,19 @@ weight = 100
 左のターミナル（`code/cdk`）:
 
 ```bash
-npx cdk destroy --yes
+time npx cdk destroy --yes
 ```
 
 真ん中のターミナル（`code/express`）:
 
 ```bash
-npx cdk destroy --express --yes
+time npx cdk destroy --express --yes
 ```
 
 右のターミナル（`code/cdkd`）:
 
 ```bash
-cdkd destroy --yes
+time cdkd destroy --yes
 ```
 
 {{% notice note %}}
@@ -49,7 +49,7 @@ Resources to be deleted (14):
 ✓ Stack CdkdStack destroyed (14 deleted, 0 errors)
 ```
 
-時間を比べたい場合は、コマンドの前に `time` を付けて実行しましょう（例: `time cdkd destroy --yes`）。
+デプロイのときと同じく、出力の最後に表示される `real` の時間を比べてみましょう。
 
 ## 確認
 

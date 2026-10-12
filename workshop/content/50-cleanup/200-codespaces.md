@@ -8,14 +8,18 @@ weight = 200
 ## 手順
 
 {{% notice warning %}}
-Codespace を削除すると、Codespace の中で変更したファイルも消えます。残しておきたいものがあれば、先に手元にコピーしてください。
+Codespace を削除すると、Codespace の中で変更したファイルも消えます。残しておきたい変更があれば、先にコミットして、fork した自分のリポジトリに push してください（`git add`、`git commit`、`git push`）。
 {{% /notice %}}
 
 1. [https://github.com/codespaces](https://github.com/codespaces) を開きます。
-2. 一覧から、このワークショップで作った Codespace（リポジトリ名が `jaws-ug-cdk/{{< reponame >}}` のもの）を探します。
+2. 一覧から、このワークショップで作った Codespace（リポジトリ名が `<GitHub のユーザー名>/{{< reponame >}}` のもの）を探します。
 3. 右側の `…` ボタンを押し、`Delete` を選びます。
 
 一覧から消えれば、削除は完了です。
+
+## （任意）fork したリポジトリを削除する
+
+fork したリポジトリは、残しておいても料金はかかりません。不要になったら、自分のリポジトリのページで `Settings` を開き、いちばん下の `Delete this repository` から削除できます。
 
 ## （任意）bootstrap で作ったものを削除する
 

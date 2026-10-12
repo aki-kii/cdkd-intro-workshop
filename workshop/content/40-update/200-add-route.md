@@ -68,19 +68,19 @@ code "$(git rev-parse --show-toplevel)/code/cdkd/lib/items-api-stack.ts"
 左のターミナル（`code/cdk`）:
 
 ```bash
-npx cdk deploy --yes
+time npx cdk deploy --yes
 ```
 
 真ん中のターミナル（`code/express`）:
 
 ```bash
-npx cdk deploy --express --yes
+time npx cdk deploy --express --yes
 ```
 
 右のターミナル（`code/cdkd`）:
 
 ```bash
-cdkd deploy --yes
+time cdkd deploy --yes
 ```
 
 ## 出力を見てみよう

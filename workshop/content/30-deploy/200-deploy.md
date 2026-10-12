@@ -10,20 +10,24 @@ weight = 200
 左のターミナル（`code/cdk`）:
 
 ```bash
-npx cdk deploy --yes
+time npx cdk deploy --yes
 ```
 
 真ん中のターミナル（`code/express`）:
 
 ```bash
-npx cdk deploy --express --yes
+time npx cdk deploy --express --yes
 ```
 
 右のターミナル（`code/cdkd`）:
 
 ```bash
-cdkd deploy --yes
+time cdkd deploy --yes
 ```
+
+{{% notice info %}}
+**`time` とは**: コマンドの前に `time` を付けると、そのコマンドが終わったときに、実行にかかった時間が表示されます。3 つの方法を同じ物差しで比べるために、このワークショップではデプロイや削除のコマンドにいつも `time` を付けます。
+{{% /notice %}}
 
 {{% notice info %}}
 **`--yes` とは**: CDK と cdkd は、IAM の権限を作ったり変えたりするデプロイや、スタックの削除の前に「続けてよいか」を確認してきます。`--yes` を付けると、この確認に自動で「はい」と答えて進みます。CDK では比較的最近追加されたオプションです。
@@ -85,16 +89,18 @@ Outputs:
 
 ## かかった時間を比べよう
 
-どの順番で終わったでしょうか。それぞれの出力から、かかった時間を確認してみましょう。
+どの順番で終わったでしょうか。3 つのターミナルとも、出力のいちばん最後に `time` による時間が表示されています。
 
-| 方法 | 見るところ |
-|---|---|
-| `cdk deploy` | `Total time` |
-| `cdk deploy --express` | `Total time` |
-| `cdkd deploy` | `Duration`（CDK のコードの変換にかかる時間は含まない） |
+```
+real    1m8.350s
+user    0m12.104s
+sys     0m1.872s
+```
+
+`real` が、コマンドを実行してから終わるまでに実際にかかった時間です（この例では 1 分 8 秒）。3 つのターミナルの `real` を比べてみましょう。`user` と `sys` はコンピューターの計算に使った時間なので、ここでは気にしなくてかまいません。
 
 {{% notice note %}}
-cdkd の `Duration` には、CDK のコードをテンプレートに変換する時間（数秒）が含まれません。CDK の `Total time` と公平に比べたい場合は、コマンドの前に `time` を付けて実行すると、全体の時間が表示されます（例: `time cdkd deploy --yes`）。
+CDK の出力の `Total time` や、cdkd の出力の `Duration` も時間を表していますが、測っている範囲がそれぞれ少し違います（たとえば cdkd の `Duration` には、CDK のコードをテンプレートに変換する時間が含まれません）。`time` の `real` なら、どの方法でも「コマンド全体にかかった時間」を同じように比べられます。
 {{% /notice %}}
 
 ## 確認
